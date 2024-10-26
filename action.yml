@@ -87,7 +87,7 @@ runs:
           Connect-MgGraph -AccessToken $accessToken -NoWelcome
 
           # Install Maester
-          Install-Module Maester -Force
+          Install-Module -Name Maester -RequiredVersion 0.3.0 -Force -AllowClobber
 
           # Configure test results
           $PesterConfiguration = New-PesterConfiguration
