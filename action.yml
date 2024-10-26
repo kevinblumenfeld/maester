@@ -87,7 +87,7 @@ runs:
           Connect-MgGraph -AccessToken $accessToken -NoWelcome
 
           # Install Maester
-          Install-Module -Name Maester -RequiredVersion 0.3.0 -Force -AllowClobber
+          Install-Module -Name Maester -AllowPrerelease -Force -AllowClobber -Repository PSGallery
           Get-Command Test-MtCisCalendarSharing | Select-Object *
 
           # Configure test results
